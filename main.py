@@ -7,14 +7,15 @@ characters). The same bytes are written on every run.
 
 import os
 
-# Draft: "Error 500: I deleted the production database, and the only
-# backup I had was a screenshot of the dashboard."
-# Revised: "Error 500:" is generic sysadmin boilerplate and "deleted"
-# is vaguer than the concrete verb; drop the label, name the hour,
-# and let the punchline land on the screenshot backup.
+# Draft: "I dropped the production database at 3 a.m. and my only
+# backup was a screenshot of the dashboard."
+# Revised: name the actual command (DROP TABLE) and the cause
+# (staging and prod looked identical) instead of the vague verb
+# "dropped"; the specific mistake is more honest and more quotable,
+# and the screenshot punchline still lands last.
 LINE = (
-    "I dropped the production database at 3 a.m. and my only "
-    "backup was a screenshot of the dashboard."
+    "I ran DROP TABLE on production at 3 a.m. because staging "
+    "and prod looked identical, and my only backup was a screenshot."
 )
 
 
